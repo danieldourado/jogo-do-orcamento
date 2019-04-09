@@ -1,0 +1,29 @@
+[gd_scene format=2]
+
+[node name="OrcamentoControl" type="VBoxContainer"]
+editor/display_folded = true
+margin_right = 801.0
+margin_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 801.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+margin_right = 38.0
+margin_bottom = 14.0
+text = "Saúde"
+
+[node name="Label2" type="Label" parent="HBoxContainer"]
+margin_left = 42.0
+margin_right = 140.0
+margin_bottom = 14.0
+text = "Prioridade: Alta"
+
+[node name="HSlider" type="HSlider" parent="."]
+margin_top = 18.0
+margin_right = 801.0
+margin_bottom = 34.0
+value = 20.0
+ticks_on_borders = false
+

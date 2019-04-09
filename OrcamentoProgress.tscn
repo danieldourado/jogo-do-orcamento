@@ -1,0 +1,28 @@
+[gd_scene format=2]
+
+[node name="OrcamentoProgress" type="VBoxContainer"]
+margin_right = 300.0
+margin_bottom = 32.0
+alignment = 1
+
+[node name="Label" type="Label" parent="."]
+margin_right = 300.0
+margin_bottom = 14.0
+text = "Saúde"
+align = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_top = 18.0
+margin_right = 300.0
+margin_bottom = 32.0
+value = 30.0
+
+[node name="Label" type="Label" parent="ProgressBar"]
+margin_right = 250.0
+text = "R$9000"
+
+[node name="Label2" type="Label" parent="ProgressBar"]
+margin_right = 300.0
+text = "R$9000"
+align = 2
+
