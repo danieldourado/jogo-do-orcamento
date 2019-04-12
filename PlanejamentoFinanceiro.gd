@@ -1,9 +1,5 @@
 extends VBoxContainer
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var slider_names = ['Saúde','Segurança','Educação','Mobilidade','Lazer']
 var max_value = 100000
 var remaining_value = 0
 var sliders = []
@@ -12,7 +8,7 @@ func _ready():
 	remaining_value = max_value
 	get_node("Label").text = "Orçamento: R$"+str(max_value)
 	set_remaining_value(remaining_value)
-	
+	var slider_names = load("res://Main.tscn").instance().get_categories()
 	create_sliders(slider_names)
 
 func create_sliders(slider_names):
