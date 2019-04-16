@@ -1,57 +1,85 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://ConstructionButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Construction.tscn" type="PackedScene" id=2]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Control" type="Control" parent="."]
+[node name="Menu" type="Control" parent="."]
+editor/display_folded = true
 margin_top = 800.0
 margin_right = 1920.0
 margin_bottom = 1080.0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu"]
 margin_right = 1920.0
 margin_bottom = 280.0
 
-[node name="ConstructionButton" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 
-[node name="ConstructionButton2" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton2" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 68.0
 margin_right = 132.0
 
-[node name="ConstructionButton3" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton3" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 136.0
 margin_right = 200.0
 
-[node name="ConstructionButton4" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton4" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 204.0
 margin_right = 268.0
 
-[node name="ConstructionButton5" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton5" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 272.0
 margin_right = 336.0
 
-[node name="ConstructionButton6" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton6" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 340.0
 margin_right = 404.0
 
-[node name="ConstructionButton7" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton7" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 408.0
 margin_right = 472.0
 
-[node name="ConstructionButton8" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton8" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 476.0
 margin_right = 540.0
 
-[node name="ConstructionButton9" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton9" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 544.0
 margin_right = 608.0
 
-[node name="ConstructionButton10" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton10" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 612.0
 margin_right = 676.0
 
-[node name="ConstructionButton11" parent="Control/HBoxContainer" instance=ExtResource( 1 )]
+[node name="ConstructionButton11" parent="Menu/HBoxContainer" instance=ExtResource( 1 )]
 margin_left = 680.0
 margin_right = 744.0
+
+[node name="Constructions" type="Node2D" parent="."]
+
+[node name="Construction" parent="Constructions" instance=ExtResource( 2 )]
+margin_left = 405.213
+margin_top = 472.748
+margin_right = 469.213
+margin_bottom = 536.748
+
+[node name="Construction2" parent="Constructions" instance=ExtResource( 2 )]
+margin_left = 1071.76
+margin_top = 334.741
+margin_right = 1135.76
+margin_bottom = 398.741
+
+[node name="Construction3" parent="Constructions" instance=ExtResource( 2 )]
+margin_left = 519.729
+margin_top = 176.179
+margin_right = 583.729
+margin_bottom = 240.179
+
+[node name="Construction4" parent="Constructions" instance=ExtResource( 2 )]
+margin_left = 701.781
+margin_top = 434.576
+margin_right = 765.781
+margin_bottom = 498.576
 
