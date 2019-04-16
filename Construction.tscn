@@ -7,7 +7,7 @@
 
 [node name="Construction" type="TextureButton"]
 margin_right = 64.0
-margin_bottom = 280.0
+margin_bottom = 64.0
 texture_normal = ExtResource( 1 )
 script = ExtResource( 2 )
 
