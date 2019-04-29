@@ -2,7 +2,7 @@ extends Area2D
 
 var new_building = null;
 var texture_rect = null;
-var can_build = false;
+var can_build = true;
 
 func _ready():
 	$".".connect("area_entered", self, "_area_entered")
@@ -19,7 +19,7 @@ func _area_exited (body):
 	can_build = true
 	
 func _process(delta):
-	var _position = get_viewport().get_mouse_position()
+	var _position = get_node("/root/Node2D/ConstructionTiles")._get_tile_position()
 	$".".position = _position
 		
 
@@ -27,7 +27,7 @@ func _pressed():
 	if !can_build: return
 	new_building = load("res://Construction.tscn").instance()
 	get_node("/root").add_child(new_building)
-	var position = get_viewport().get_mouse_position()
+	var position = get_node("/root/Node2D/ConstructionTiles")._get_tile_position()
 	new_building.rect_position.x = position.x
 	new_building.rect_position.y = position.y
 	get_node("/root").remove_child(self)
