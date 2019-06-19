@@ -14,7 +14,7 @@ func _ready():
 func create_sliders(slider_names):
 	for slider_name in slider_names:
 		var temp_slider = load("res://PlanejamentoFinanceiroSlider.tscn").instance()
-		add_child(temp_slider)
+		get_node("Container").add_child(temp_slider)
 		temp_slider.change_label_name(slider_name)
 		temp_slider.set_max_value(max_value)
 		sliders.append(temp_slider)

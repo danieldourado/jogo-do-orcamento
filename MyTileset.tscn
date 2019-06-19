@@ -1,0 +1,173 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://images/Ground/ARVORES_01.png" type="Texture" id=1]
+[ext_resource path="res://images/Ground/ARVORES_02.png" type="Texture" id=2]
+[ext_resource path="res://images/Ground/ARVORES_03.png" type="Texture" id=3]
+[ext_resource path="res://images/Ground/ARVORES_04.png" type="Texture" id=4]
+[ext_resource path="res://images/Ground/ARVORES_05.png" type="Texture" id=5]
+[ext_resource path="res://images/Ground/ARVORES_06.png" type="Texture" id=6]
+[ext_resource path="res://images/Ground/ARVORES_07.png" type="Texture" id=7]
+[ext_resource path="res://images/Ground/ARVORES_08.png" type="Texture" id=8]
+[ext_resource path="res://images/Ground/ARVORES_09.png" type="Texture" id=9]
+[ext_resource path="res://images/Ground/CALCADA_01.png" type="Texture" id=10]
+[ext_resource path="res://images/Ground/CALCADA_02.png" type="Texture" id=11]
+[ext_resource path="res://images/Ground/CALCADA_03.png" type="Texture" id=12]
+[ext_resource path="res://images/Ground/CALCADA_04.png" type="Texture" id=13]
+[ext_resource path="res://images/Ground/CALCADA_05.png" type="Texture" id=14]
+[ext_resource path="res://images/Ground/CALCADA_06.png" type="Texture" id=15]
+[ext_resource path="res://images/Ground/GRAMAS_01.png" type="Texture" id=16]
+[ext_resource path="res://images/Ground/GRAMAS_02.png" type="Texture" id=17]
+[ext_resource path="res://images/Ground/GRAMAS_03.png" type="Texture" id=18]
+[ext_resource path="res://images/Ground/GRAMAS_04.png" type="Texture" id=19]
+[ext_resource path="res://images/Ground/GRAMAS_05.png" type="Texture" id=20]
+[ext_resource path="res://images/Ground/GRAMAS_06.png" type="Texture" id=21]
+[ext_resource path="res://images/Street/PISTA_01.png" type="Texture" id=22]
+[ext_resource path="res://images/Street/PISTA_02.png" type="Texture" id=23]
+[ext_resource path="res://images/Street/PISTA_03.png" type="Texture" id=24]
+[ext_resource path="res://images/Street/PISTA_04.png" type="Texture" id=25]
+[ext_resource path="res://images/Street/PISTA_05.png" type="Texture" id=26]
+[ext_resource path="res://images/Street/PISTA_06.png" type="Texture" id=27]
+[ext_resource path="res://images/Street/PISTA_07.png" type="Texture" id=28]
+[ext_resource path="res://images/Street/PISTA_08.png" type="Texture" id=29]
+[ext_resource path="res://images/Street/PISTA_09.png" type="Texture" id=30]
+[ext_resource path="res://images/Street/PISTA_10.png" type="Texture" id=31]
+[ext_resource path="res://images/Street/PISTA_11.png" type="Texture" id=32]
+[ext_resource path="res://images/Street/POSTES.png" type="Texture" id=33]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 322.408, -69.3789 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 216.299, 87.0638 )
+texture = ExtResource( 3 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 137.398, -72.0997 )
+texture = ExtResource( 4 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+position = Vector2( -85.7034, -141.479 )
+texture = ExtResource( 5 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+position = Vector2( 127.875, -165.965 )
+texture = ExtResource( 6 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 329.21, -189.092 )
+texture = ExtResource( 7 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+position = Vector2( 484.292, -127.875 )
+texture = ExtResource( 8 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+position = Vector2( 432.598, 19.0452 )
+texture = ExtResource( 9 )
+
+[node name="Sprite10" type="Sprite" parent="."]
+position = Vector2( 326.489, 186.371 )
+texture = ExtResource( 10 )
+
+[node name="Sprite11" type="Sprite" parent="."]
+position = Vector2( 616.248, 121.073 )
+texture = ExtResource( 11 )
+
+[node name="Sprite12" type="Sprite" parent="."]
+position = Vector2( 765.889, -17.6848 )
+texture = ExtResource( 12 )
+
+[node name="Sprite13" type="Sprite" parent="."]
+position = Vector2( 650.258, -88.4241 )
+texture = ExtResource( 13 )
+
+[node name="Sprite14" type="Sprite" parent="."]
+position = Vector2( 759.087, -142.839 )
+texture = ExtResource( 14 )
+
+[node name="Sprite15" type="Sprite" parent="."]
+position = Vector2( 908.728, -92.5052 )
+texture = ExtResource( 15 )
+
+[node name="Sprite16" type="Sprite" parent="."]
+position = Vector2( 975.387, 20.4056 )
+texture = ExtResource( 16 )
+
+[node name="Sprite17" type="Sprite" parent="."]
+position = Vector2( 812.142, 110.19 )
+texture = ExtResource( 17 )
+
+[node name="Sprite18" type="Sprite" parent="."]
+position = Vector2( 706.033, 182.29 )
+texture = ExtResource( 18 )
+
+[node name="Sprite19" type="Sprite" parent="."]
+position = Vector2( 531.905, 238.065 )
+texture = ExtResource( 19 )
+
+[node name="Sprite20" type="Sprite" parent="."]
+position = Vector2( 624.411, 333.291 )
+texture = ExtResource( 19 )
+
+[node name="Sprite21" type="Sprite" parent="."]
+position = Vector2( 794.457, 304.723 )
+texture = ExtResource( 20 )
+
+[node name="Sprite22" type="Sprite" parent="."]
+position = Vector2( 993.072, 156.443 )
+texture = ExtResource( 21 )
+
+[node name="Sprite23" type="Sprite" parent="."]
+position = Vector2( -68.0187, 223.101 )
+texture = ExtResource( 22 )
+
+[node name="Sprite24" type="Sprite" parent="."]
+position = Vector2( 66.6581, 297.921 )
+texture = ExtResource( 23 )
+
+[node name="Sprite25" type="Sprite" parent="."]
+position = Vector2( 70.7393, 161.884 )
+texture = ExtResource( 24 )
+
+[node name="Sprite26" type="Sprite" parent="."]
+position = Vector2( 197.254, 228.542 )
+texture = ExtResource( 25 )
+
+[node name="Sprite27" type="Sprite" parent="."]
+position = Vector2( 202.695, 378.183 )
+texture = ExtResource( 26 )
+
+[node name="Sprite28" type="Sprite" parent="."]
+position = Vector2( 316.967, 308.804 )
+texture = ExtResource( 27 )
+
+[node name="Sprite29" type="Sprite" parent="."]
+position = Vector2( 412.193, 372.742 )
+texture = ExtResource( 28 )
+
+[node name="Sprite30" type="Sprite" parent="."]
+position = Vector2( 555.032, 439.4 )
+texture = ExtResource( 29 )
+
+[node name="Sprite31" type="Sprite" parent="."]
+position = Vector2( 764.529, 467.968 )
+texture = ExtResource( 30 )
+
+[node name="Sprite32" type="Sprite" parent="."]
+position = Vector2( 893.764, 383.625 )
+texture = ExtResource( 31 )
+
+[node name="Sprite33" type="Sprite" parent="."]
+position = Vector2( 979.468, 377.183 )
+texture = ExtResource( 32 )
+
+[node name="Sprite34" type="Sprite" parent="."]
+position = Vector2( 1001.23, 247.948 )
+texture = ExtResource( 33 )
+

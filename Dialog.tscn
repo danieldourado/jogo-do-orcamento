@@ -1,10 +1,44 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
+
+func _on_YesButton_pressed():
+	remove_me_from_parent()
+
+
+func _on_NoButton_pressed():
+	remove_me_from_parent()
+
+func remove_me_from_parent():
+	get_parent().remove_child(get_node(\".\"))"
+
 [node name="Control" type="Control"]
-margin_right = 40.0
-margin_bottom = 40.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -204.0
+margin_top = -203.5
+margin_right = 204.0
+margin_bottom = 203.5
+rect_pivot_offset = Vector2( 310, 150 )
+script = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 400.0
@@ -21,7 +55,6 @@ texture = ExtResource( 1 )
 expand = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-editor/display_folded = true
 margin_top = 249.0
 margin_right = 405.0
 margin_bottom = 408.0
@@ -53,15 +86,17 @@ margin_right = 200.0
 margin_bottom = 17.0
 text = "Custo: 5000"
 
-[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="YesButton" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 204.0
 margin_right = 240.0
 margin_bottom = 20.0
 text = "Sim"
 
-[node name="Button2" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="NoButton" type="Button" parent="VBoxContainer/HBoxContainer"]
 margin_left = 244.0
 margin_right = 281.0
 margin_bottom = 20.0
 text = "Não"
 
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/YesButton" to="." method="_on_YesButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/NoButton" to="." method="_on_NoButton_pressed"]
