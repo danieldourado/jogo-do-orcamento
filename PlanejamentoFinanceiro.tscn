@@ -9,7 +9,8 @@ func _ready():
 	connect(\"toggled\", self, \"_on_Button_pressed\")
 
 func _on_Button_pressed():
-    get_tree().change_scene(\"res://Gameplay.tscn\")
+	if get_parent().can_change_scene():
+    	get_tree().change_scene(\"res://Gameplay.tscn\")
 "
 
 [node name="PlanejamentoFinanceiro" type="VBoxContainer"]

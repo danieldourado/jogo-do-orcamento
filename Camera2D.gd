@@ -5,8 +5,10 @@ var initial_mouse_position = null
 var initial_position
 
 func _ready():
-	get_node("/root/Node2D/Button").connect("button_down", self, "relocate_camera")
-	get_node("/root/Node2D/Button").connect("button_up", self, "stop_relocate_camera")
+	var root = get_parent()
+	print(root.name)
+	get_parent().get_node("Button").connect("button_down", self, "relocate_camera")
+	get_parent().get_node("Button").connect("button_up", self, "stop_relocate_camera")
 	
 
 func _input(event):

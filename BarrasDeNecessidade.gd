@@ -15,4 +15,4 @@ func create_barras_de_necessidade(categories):
 		add_child(temp_barra)
 		#temp_barra.change_label_name(category)
 		barras.append(temp_barra)
-		temp_barra.set_value(rand_range(1,101))
+		temp_barra.set_value(3)

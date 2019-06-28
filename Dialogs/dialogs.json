@@ -1,0 +1,29 @@
+[{
+	"dialogs": [{
+			"tipo": "Saúde",
+			"texto": "Houve um incêndio no antigo hospital. Deseja criar um novo?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "Hospital1"
+		},
+		{
+			"tipo": "Educação",
+			"texto": "Houve um incêndio na antiga escola. Deseja criar uma nova?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "Escola1"
+		}
+	]
+}]
