@@ -54,13 +54,9 @@ func get_reset_priorities(categories_list):
 func set_priorities_weights(base_priorities, ammount_of_weights):
 	var weighted_priorities = {}
 	while ammount_of_weights > 0:
-		var index = get_random(base_priorities.size())
+		var index = Global.get_random(base_priorities.size())
 		var temp_priority = base_priorities[index]
 		if temp_priority.value <3:
 			temp_priority.value = temp_priority.value+1
 			ammount_of_weights = ammount_of_weights -1
 	return base_priorities
-	
-func get_random(to):
-	randomize()
-	return randi()%to

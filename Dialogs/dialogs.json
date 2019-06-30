@@ -1,7 +1,7 @@
 [{
 	"dialogs": [{
 			"tipo": "Saúde",
-			"texto": "Houve um incêndio no antigo hospital. Deseja criar um novo?",
+			"texto": "Houve um incêndio no hospital. Perda total. Deseja construir um novo?",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -14,7 +14,7 @@
 		},
 		{
 			"tipo": "Educação",
-			"texto": "Houve um incêndio na antiga escola. Deseja criar uma nova?",
+			"texto": "Houve um incêndio na escola. Perda total. Deseja construir uma nova?",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -24,6 +24,45 @@
 				"satisfacao": -1
 			},
 			"predio": "Escola1"
+		},
+		{
+			"tipo": "Segurança",
+			"texto": "Houve um incêndio na delegacia. Perda total. Deseja construir uma nova?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "Delegacia1"
+		},
+		{
+			"tipo": "Mobilidade",
+			"texto": "Houve um incêndio na rodoviária. Perda total. Deseja construir uma nova?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "Rodoviaria1"
+		},
+		{
+			"tipo": "Lazer",
+			"texto": "Houve um incêndio no parque de diversões. Perda total. Deseja construir um novo?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "Lazer1"
 		}
 	]
 }]

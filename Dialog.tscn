@@ -13,9 +13,8 @@ script/source = "extends Control
 func _ready():
 	pass # Replace with function body.
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func set_dialog_type(type):
+	print(\"type set to \"+type)
 
 
 func _on_YesButton_pressed():
@@ -98,6 +97,5 @@ margin_left = 244.0
 margin_right = 281.0
 margin_bottom = 20.0
 text = "Não"
-
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/YesButton" to="." method="_on_YesButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/NoButton" to="." method="_on_NoButton_pressed"]
