@@ -1,18 +1,23 @@
-extends HBoxContainer
+extends Control
 
 var barras = []
 
 func _ready():
-	pass # Replace with function body.
-	var categories = load("res://Main.tscn").instance().get_categories()
-	create_barras_de_necessidade(categories)
-	add_constant_override("separation", 50)
+	Global.barras_de_necessidade = self
+	
+	create_barras_de_necessidade(Global.categories)
+	get_node("CenterContainer/HBox").add_constant_override("separation", 50)
 	
 	
 func create_barras_de_necessidade(categories):
 	for category in categories:
 		var temp_barra = load("res://BarraDeNecessidade.tscn").instance()
-		add_child(temp_barra)
+		get_node("CenterContainer/HBox").add_child(temp_barra)
 		#temp_barra.change_label_name(category)
 		barras.append(temp_barra)
-		temp_barra.set_value(3)
+		temp_barra.set_type(category)
+		
+func set_satisfacao(type, ammount):
+	for barra in barras:
+		if str(barra.type.key) == str(type):
+			barra.set_value(barra.get_value() + ammount)

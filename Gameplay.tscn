@@ -11,10 +11,12 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
+var BarrasDeNecessidade
 var decisions = []
 var round_n = 0
 var max_rounds = 4
 var decisions_per_round = 4
+
 
 func _ready():
 	var weighted_list = get_weighted_list(Global.categories)

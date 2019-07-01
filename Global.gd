@@ -1,11 +1,13 @@
 extends Node
 
-var categories = []
+var categories = ['Saúde','Segurança','Educação','Mobilidade','Lazer']
 var game_data = {}
 var dialogs = {}
+var barras_de_necessidade
 
 func _ready():
 	game_data = get_json("res://Dialogs/dialogs.json")
+
 
 	
 func get_json(file_address):
