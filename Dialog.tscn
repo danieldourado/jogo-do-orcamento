@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://images/Camada 13.png" type="Texture" id=2]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Control
@@ -35,6 +36,8 @@ func sort_dialogs_by_type(dialog_data):
 	
 func _on_YesButton_pressed():
 	Global.barras_de_necessidade.set_satisfacao(type, dialog_data.sim.satisfacao)
+	Global.construction_menu.add_building(dialog_data.predio)
+	
 	remove_me_from_parent()
 
 
@@ -59,6 +62,7 @@ rect_pivot_offset = Vector2( 310, 150 )
 script = SubResource( 1 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.12549, 0.12549, 0.12549, 1 )
 margin_right = 400.0
 margin_bottom = 400.0
 texture = ExtResource( 1 )
@@ -69,8 +73,9 @@ margin_left = 100.668
 margin_top = 35.3698
 margin_right = 300.668
 margin_bottom = 235.37
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 expand = true
+stretch_mode = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_top = 249.0

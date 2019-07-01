@@ -19,11 +19,12 @@ var decisions_per_round = 4
 
 
 func _ready():
+	Global.gameplay = self
 	var weighted_list = get_weighted_list(Global.categories)
-	advance_round(weighted_list, round_n, max_rounds, decisions_per_round)
+	advance_round()
 		
-func advance_round(list, round_n, max_rounds, decisions_per_round):
-	
+func advance_round():
+	var list = get_weighted_list(Global.categories)
 	round_n = round_n + 1
 	if(round_n > max_rounds): return
 	
@@ -89,6 +90,7 @@ script = ExtResource( 5 )
 [node name="ConstructionMenu" parent="CanvasLayer" instance=ExtResource( 6 )]
 margin_top = -141.0
 margin_bottom = 3.0
+construction_buttons = [  ]
 
 [node name="BarrasDeNecessidade" parent="CanvasLayer" instance=ExtResource( 7 )]
 

@@ -8,4 +8,4 @@ func _ready():
 func add_planejamento_financeiro():
 	var planejamentoScene = load("res://PlanejamentoFinanceiro.tscn").instance()
 	add_child(planejamentoScene)
-	planejamentoScene.start(Global.categories)
+	

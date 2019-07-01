@@ -4,12 +4,12 @@ var categories = ['Saúde','Segurança','Educação','Mobilidade','Lazer']
 var game_data = {}
 var dialogs = {}
 var barras_de_necessidade
+var construction_menu
+var gameplay
 
 func _ready():
 	game_data = get_json("res://Dialogs/dialogs.json")
 
-
-	
 func get_json(file_address):
 	var file = File.new()
 	file.open(file_address, file.READ)

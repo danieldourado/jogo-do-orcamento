@@ -4,6 +4,7 @@ var new_building = null;
 var texture_rect = null;
 var can_build = true;
 var built = false;
+var building_name
 
 func _ready():
 	$"Area2D".connect("area_entered", self, "_area_entered")
@@ -36,4 +37,9 @@ func _pressed():
 	if !can_build: return
 	built = true
 	get_node("/root/Node2D/Button").disconnect("pressed", self, "_pressed")
+	Global.construction_menu.remove_building(building_name)
+
+	
+func set_name(new_name):
+	building_name = new_name
 	
