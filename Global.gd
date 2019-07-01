@@ -2,11 +2,12 @@ extends Node
 
 var categories = []
 var game_data = {}
+var dialogs = {}
 
 func _ready():
 	game_data = get_json("res://Dialogs/dialogs.json")
-	
 
+	
 func get_json(file_address):
 	var file = File.new()
 	file.open(file_address, file.READ)

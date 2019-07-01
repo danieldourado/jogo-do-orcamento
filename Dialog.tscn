@@ -5,18 +5,31 @@
 [sub_resource type="GDScript" id=1]
 script/source = "extends Control
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
 func set_dialog_type(type):
-	print(\"type set to \"+type)
+	var dialog_data = get_dialog_from_type(type)
+	get_node(\"VBoxContainer/Label\").text = \"Decisão sobre \"+dialog_data.tipo
+	get_node(\"VBoxContainer/Label2\").text = dialog_data.texto
+	get_node(\"VBoxContainer/HBoxContainer/Label\").text = \"Custo: \"+str((int(dialog_data.sim.financeiro) * -1))
 
+	
+func get_dialog_from_type(type):
+	var dialogs = sort_dialogs_by_type(Global.game_data.dialogs)[type]
+	if dialogs.size() == 1:
+		return dialogs[0]
+		
+	var index = Global.get_random(dialogs.size())
+	var dialog = dialogs[index]
+	dialogs.remove(index)
+	return dialog
 
+func sort_dialogs_by_type(dialog_data):
+	var dialogs = {}
+	for dialog in dialog_data:
+		if dialogs.has(dialog.tipo) == false:
+			dialogs[dialog.tipo] = []
+		dialogs[dialog.tipo].append(dialog)
+	return dialogs		
+	
 func _on_YesButton_pressed():
 	remove_me_from_parent()
 
