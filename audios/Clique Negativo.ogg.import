@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Clique Negativo.ogg-6fc672d86c5e5c4fa45633f1178d26e1.oggstr"
+
+[deps]
+
+source_file="res://audios/Clique Negativo.ogg"
+dest_files=[ "res://.import/Clique Negativo.ogg-6fc672d86c5e5c4fa45633f1178d26e1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

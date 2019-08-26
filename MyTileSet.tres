@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=34 format=2]
+[gd_resource type="TileSet" load_steps=35 format=2]
 
 [ext_resource path="res://images/Ground/ARVORES_01.png" type="Texture" id=1]
 [ext_resource path="res://images/Ground/ARVORES_02.png" type="Texture" id=2]
@@ -27,12 +27,13 @@
 [ext_resource path="res://images/Street/PISTA_10.png" type="Texture" id=25]
 [ext_resource path="res://images/Street/PISTA_11.png" type="Texture" id=26]
 [ext_resource path="res://images/Street/POSTES.png" type="Texture" id=27]
-[ext_resource path="res://images/Ground/ARVORES_05.png" type="Texture" id=28]
-[ext_resource path="res://images/Ground/ARVORES_06.png" type="Texture" id=29]
-[ext_resource path="res://images/Ground/ARVORES_07.png" type="Texture" id=30]
-[ext_resource path="res://images/Ground/ARVORES_08.png" type="Texture" id=31]
-[ext_resource path="res://images/Ground/ARVORES_09.png" type="Texture" id=32]
-[ext_resource path="res://images/Ground/CALCADA_01.png" type="Texture" id=33]
+[ext_resource path="res://images/Sea/TILE_AGUA.png" type="Texture" id=28]
+[ext_resource path="res://images/Ground/ARVORES_05.png" type="Texture" id=29]
+[ext_resource path="res://images/Ground/ARVORES_06.png" type="Texture" id=30]
+[ext_resource path="res://images/Ground/ARVORES_07.png" type="Texture" id=31]
+[ext_resource path="res://images/Ground/ARVORES_08.png" type="Texture" id=32]
+[ext_resource path="res://images/Ground/ARVORES_09.png" type="Texture" id=33]
+[ext_resource path="res://images/Ground/CALCADA_01.png" type="Texture" id=34]
 
 [resource]
 0/name = "Sprite"
@@ -76,7 +77,7 @@
 3/shapes = [  ]
 3/z_index = 0
 4/name = "Sprite5"
-4/texture = ExtResource( 28 )
+4/texture = ExtResource( 29 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 0, 0, 192, 96 )
@@ -86,7 +87,7 @@
 4/shapes = [  ]
 4/z_index = 0
 5/name = "Sprite6"
-5/texture = ExtResource( 29 )
+5/texture = ExtResource( 30 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 0, 0, 192, 96 )
@@ -96,7 +97,7 @@
 5/shapes = [  ]
 5/z_index = 0
 6/name = "Sprite7"
-6/texture = ExtResource( 30 )
+6/texture = ExtResource( 31 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 0, 0, 192, 96 )
@@ -106,7 +107,7 @@
 6/shapes = [  ]
 6/z_index = 0
 7/name = "Sprite8"
-7/texture = ExtResource( 31 )
+7/texture = ExtResource( 32 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 0, 192, 96 )
@@ -116,7 +117,7 @@
 7/shapes = [  ]
 7/z_index = 0
 8/name = "Sprite9"
-8/texture = ExtResource( 32 )
+8/texture = ExtResource( 33 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 0, 192, 96 )
@@ -126,7 +127,7 @@
 8/shapes = [  ]
 8/z_index = 0
 9/name = "Sprite10"
-9/texture = ExtResource( 33 )
+9/texture = ExtResource( 34 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 0, 192, 96 )
@@ -375,4 +376,14 @@
 33/navigation_offset = Vector2( 96, 72.5 )
 33/shapes = [  ]
 33/z_index = 0
+34/name = "Sprite35"
+34/texture = ExtResource( 28 )
+34/tex_offset = Vector2( 0, 0 )
+34/modulate = Color( 1, 1, 1, 1 )
+34/region = Rect2( 0, 0, 192, 96 )
+34/tile_mode = 0
+34/occluder_offset = Vector2( 96, 48 )
+34/navigation_offset = Vector2( 96, 48 )
+34/shapes = [  ]
+34/z_index = 0
 

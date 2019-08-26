@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Feedback Positivo.ogg-d0d9774ddc67db5e1f6f4facc281b438.oggstr"
+
+[deps]
+
+source_file="res://audios/Feedback Positivo.ogg"
+dest_files=[ "res://.import/Feedback Positivo.ogg-d0d9774ddc67db5e1f6f4facc281b438.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

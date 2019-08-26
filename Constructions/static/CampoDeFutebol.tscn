@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://images/Camada 43.png" type="Texture" id=1]
+[ext_resource path="res://Constructions/static/StaticConstruction.gd" type="Script" id=2]
+[ext_resource path="res://Constructions/TileShape.tscn" type="PackedScene" id=3]
+
+[node name="StaticConstruction" type="Sprite"]
+position = Vector2( 241, 125 )
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="TileShape" parent="." instance=ExtResource( 3 )]
+position = Vector2( -334.208, -182.951 )
+rotation = 0.261799
+scale = Vector2( 4, 2 )
+

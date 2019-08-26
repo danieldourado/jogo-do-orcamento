@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pegar Item - Animacao Comemoracao.ogg-905f0d7b1fabe268973fd59eee53f8fb.oggstr"
+
+[deps]
+
+source_file="res://audios/Pegar Item - Animacao Comemoracao.ogg"
+dest_files=[ "res://.import/Pegar Item - Animacao Comemoracao.ogg-905f0d7b1fabe268973fd59eee53f8fb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://images/Interface/BOTAO_VERDE_OK_NORMAL.png" type="Texture" id=1]
+[ext_resource path="res://images/Interface/BOTAO_VERDE_OK_PRESSED.png" type="Texture" id=2]
+[ext_resource path="res://PlaySoundButton.gd" type="Script" id=3]
+[ext_resource path="res://audios/Clique 2.ogg" type="AudioStream" id=4]
+
+[node name="OKButton" type="TextureButton"]
+margin_left = 162.0
+margin_top = 192.0
+margin_right = 232.0
+margin_bottom = 239.0
+rect_min_size = Vector2( 90, 60 )
+size_flags_horizontal = 4
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 3 )
+stream = ExtResource( 4 )
+
+[connection signal="pressed" from="." to="." method="_on_OKButton_pressed"]

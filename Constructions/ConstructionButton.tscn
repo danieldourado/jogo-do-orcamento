@@ -1,16 +1,22 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Constructions/ConstructionButton.gd" type="Script" id=1]
 [ext_resource path="res://images/Camada 5 copiar.png" type="Texture" id=2]
+[ext_resource path="res://fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://images/Interface/NONE.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 15
+font_data = ExtResource( 3 )
 
 [node name="ConstructionButton" type="VBoxContainer"]
-margin_right = 109.0
-margin_bottom = 144.0
-rect_min_size = Vector2( 100, 144 )
+margin_right = 131.0
+margin_bottom = 146.0
+rect_min_size = Vector2( 100, 120 )
 script = ExtResource( 1 )
 
 [node name="Texture" type="TextureButton" parent="."]
-margin_right = 120.0
+margin_right = 131.0
 margin_bottom = 120.0
 rect_min_size = Vector2( 120, 120 )
 texture_normal = ExtResource( 2 )
@@ -19,8 +25,25 @@ stretch_mode = 5
 
 [node name="BuildingName" type="Label" parent="."]
 margin_top = 124.0
-margin_right = 120.0
-margin_bottom = 138.0
+margin_right = 131.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Name of building"
 align = 1
+
+[node name="counter" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 16.2175, 21.6211 )
+texture = ExtResource( 4 )
+
+[node name="counter-label" type="Label" parent="counter"]
+margin_left = -5.40355
+margin_top = -5.94392
+margin_right = 34.5965
+margin_bottom = 8.05608
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1"
+
 [connection signal="pressed" from="Texture" to="." method="_on_Texture_pressed"]

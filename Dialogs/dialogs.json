@@ -10,7 +10,8 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Hospital1"
+			"predio": "Hospital1",
+			"nome": "Hospital"
 		},
 		{
 			"tipo": "Educação",
@@ -23,7 +24,8 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Escola1"
+			"predio": "Escola1",
+			"nome": "Escola"
 		},
 		{
 			"tipo": "Segurança",
@@ -36,7 +38,8 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Delegacia1"
+			"predio": "Delegacia1",
+			"nome": "Delegacia"
 		},
 		{
 			"tipo": "Mobilidade",
@@ -49,7 +52,8 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Rodoviaria1"
+			"predio": "Rodoviaria2",
+			"nome": "Rodoviária"
 		},
 		{
 			"tipo": "Lazer",
@@ -62,7 +66,9 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Lazer1"
+			"predio": "Lazer2",
+			"nome": "Campo de Futebol"
+			
 		}
 	]
 }]

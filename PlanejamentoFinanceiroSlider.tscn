@@ -1,35 +1,63 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://PlanejamentoFinanceiroSlider.gd" type="Script" id=1]
+[ext_resource path="res://themes/slider.tres" type="Theme" id=1]
+[ext_resource path="res://PlanejamentoFinanceiroSlider.gd" type="Script" id=2]
 
 [node name="PlanejamentoFinanceiroSlider" type="VBoxContainer"]
 margin_right = 801.0
 margin_bottom = 40.0
-script = ExtResource( 1 )
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_right = 801.0
-margin_bottom = 14.0
+margin_bottom = 23.0
 
 [node name="Label" type="Label" parent="HBoxContainer"]
-margin_right = 38.0
-margin_bottom = 14.0
+margin_right = 49.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Saúde"
 
 [node name="Label2" type="Label" parent="HBoxContainer"]
-margin_left = 42.0
-margin_right = 140.0
-margin_bottom = 14.0
-text = "Prioridade: Alta"
+margin_left = 53.0
+margin_right = 381.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Saúde"
 
 [node name="Label3" type="Label" parent="HBoxContainer"]
-margin_left = 144.0
-margin_right = 242.0
-margin_bottom = 14.0
-text = "Prioridade: Alta"
+margin_left = 385.0
+margin_right = 468.0
+margin_bottom = 23.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Prioridade"
+
+[node name="Label4" type="Label" parent="HBoxContainer"]
+margin_left = 472.0
+margin_right = 801.0
+margin_bottom = 23.0
+size_flags_horizontal = 3
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Alta"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+margin_top = 27.0
+margin_right = 801.0
+margin_bottom = 43.33
+rect_min_size = Vector2( 2.26, 16.33 )
 
 [node name="HSlider" type="HSlider" parent="."]
-margin_top = 18.0
+margin_top = 47.0
 margin_right = 801.0
-margin_bottom = 34.0
+margin_bottom = 58.0
+theme = ExtResource( 1 )
 ticks_on_borders = false
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+margin_top = 62.0
+margin_right = 801.0
+margin_bottom = 78.33
+rect_min_size = Vector2( 2.26, 16.33 )
+
