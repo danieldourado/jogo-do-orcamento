@@ -13,7 +13,7 @@ func on_new_game_pressed():
 	#"Texto narrativo explicando a história do jogo e o objetivo do jogador ", "prefeito", load("res://audios/Feedback Positivo.ogg"), self, "add_planejamento", self)
 	add_planejamento()
 	var tutorial1 = load("res://CutScene.tscn").instance()
-	tutorial1.set_cutscene([	"Tutorial-01.jpg","Tutorial-02.jpg","Tutorial-03.jpg",
+	tutorial1.set_cutscene([	"Tutorial-01.jpg","Tutorial-01-2.jpg","Tutorial-01-03.jpg","Tutorial-02.jpg","Tutorial-03.jpg",
 							"Tutorial-04.jpg","Tutorial-05.jpg","Tutorial-06.jpg", 
 							"Tutorial-07.jpg","Tutorial-08.jpg","Tutorial-09.jpg",
 							"Tutorial-10.jpg"])
