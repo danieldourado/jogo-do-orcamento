@@ -1032,6 +1032,8 @@ margin_bottom = 440.0
 [node name="GameplayControl" type="Node2D" parent="."]
 script = SubResource( 1 )
 
+[node name="PlayerConstructions" type="Node2D" parent="GameplayControl"]
+
 [node name="BuildingsLarge" type="Node2D" parent="GameplayControl"]
 editor/display_folded = true
 
