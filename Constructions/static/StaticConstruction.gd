@@ -1,4 +1,4 @@
-extends Sprite
+extends "../SpriteZIndexOrdered.gd"
 
 var to_get_removed
 var random = true
@@ -13,12 +13,7 @@ var two_by_two_size_height = one_by_one_size
 
 
 func _ready():
-	arrange_z_index()
 	get_random_texture()
-	
-func arrange_z_index():
-	z_index = int(get_global_transform().origin.y/10)+1000
-	print(z_index)
 	
 func get_random_texture():
 	if Global.get_random(10) == 9:

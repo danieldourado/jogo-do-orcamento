@@ -4,7 +4,8 @@ var relocate_camera = false
 var initial_mouse_position = null
 var initial_position
 export var zoom_factor = 1
-export var zoom_ease_time = 2
+export var zoom_ease_time = 0.5
+export var move_multiplier = 2
 var current_tween
 var zoom_to
 
@@ -27,15 +28,15 @@ func _input(event):
 
 # Zoom Camera
 func _zoom_camera(dir):
-	if current_tween: 
-		current_tween.stop_all()
 	zoom_to = zoom_to + Vector2(0.1, 0.1) * dir
+	var zoom_clamped = clamp(zoom_to.x, 1.0, 4.0)
+	zoom_to = Vector2(zoom_clamped, zoom_clamped)
 	current_tween = animate_to(self, "zoom", zoom_to, zoom_ease_time)
 
 func _process(delta):
 	if relocate_camera:
 		var current_location = get_viewport().get_mouse_position()
-		position = initial_position +(initial_mouse_position - current_location)
+		position  = initial_position +((initial_mouse_position - current_location)*move_multiplier)
 		
 
 func relocate_camera():
@@ -44,9 +45,11 @@ func relocate_camera():
 	initial_position = position
 	
 func stop_relocate_camera():
-	relocate_camera = false	
+	relocate_camera = false
 	
 func animate_to(nodeOrPath, prop, to, length = 0.5, easing = 2):
+	if current_tween: 
+		current_tween.stop_all()
 	var node = nodeOrPath
 	var tween = Tween.new()
 	node.add_child(tween)

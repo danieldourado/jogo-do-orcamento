@@ -80,7 +80,8 @@ func set_buildable():
 
 func is_texture_is_over_not_buildable_tile(cell_index, ct):
 	if get_texture_cell_size() == 1:
-		return ct.get_cell(cell_index.x, cell_index.y) != 15
+		var cell_id = ct.get_cell(cell_index.x, cell_index.y)
+		return (cell_id != 15) and (cell_id != 36)
 		
 	if get_texture_cell_size() == 2:
 		var cell_ids = []
@@ -90,7 +91,7 @@ func is_texture_is_over_not_buildable_tile(cell_index, ct):
 		cell_ids.append(ct.get_cell(cell_index.x-1, cell_index.y-1))
 		
 		for temp_cell_id in cell_ids:
-			if temp_cell_id != 15:
+			if (temp_cell_id != 15) and (temp_cell_id != 36):
 				return true
 		return false
 		
