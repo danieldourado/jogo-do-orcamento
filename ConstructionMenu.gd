@@ -27,7 +27,7 @@ func remove_building(building_name):
 				break
 			
 	if(buildings.size() == 0):
-		Global.gameplay.fim_etapa_construcao()
+		Global.gameplay.activate_one_dialog()
 
 func add_building_counter(building_texture_name):
 	for building in buildings:

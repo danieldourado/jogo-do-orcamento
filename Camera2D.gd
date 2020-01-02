@@ -11,7 +11,6 @@ var zoom_to
 
 func _ready():
 	var root = get_parent()
-	print(root.name)
 	get_parent().get_node("Button").connect("button_down", self, "relocate_camera")
 	get_parent().get_node("Button").connect("button_up", self, "stop_relocate_camera")
 	zoom_to = zoom
@@ -19,11 +18,9 @@ func _ready():
 func _input(event):
     # Wheel Up Event
     if event.is_action_pressed("zoom_in"):
-        print("zoom in")
         _zoom_camera(-zoom_factor)
     # Wheel Down Event
     elif event.is_action_pressed("zoom_out"):
-        print("zoom out")
         _zoom_camera(zoom_factor)
 
 # Zoom Camera

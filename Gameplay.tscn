@@ -75,40 +75,52 @@ script/source = "extends Node2D
 var BarrasDeNecessidade
 var decisions = []
 var round_n = 0
-
+var dialogs
+var first_decision = true
 
 func _ready():
 	Global.gameplay = self
 	
 	var weighted_list = get_weighted_list(Global.categories)
 	
-	var tutorial1 = load(\"res://CutScene.tscn\").instance()
-	tutorial1.set_cutscene([\"Tutorial-23.jpg\",\"Tutorial-24.jpg\",\"Tutorial-25.jpg\",
-							\"Tutorial-26.jpg\",\"Tutorial-27.jpg\"], self, \"check_if_has_buildings\")
-	get_parent().get_node(\"CanvasLayer\").add_child(tutorial1)
-	get_parent().get_node(\"CanvasLayer\").move_child(tutorial1, 0)
-	
+	create_tutorial_how_to_build()
 	advance_round()
 
 
 func advance_round():
 	#Global.construction_menu.hide()
-	var list = get_weighted_list(Global.categories)
 	round_n = round_n + 1
 	if(round_n > Global.max_rounds): return
 	
+	dialogs = get_dialog_list()
 	#Global.create_generic_dialog(\"Fim das decisões\", 
 	#\"Texto narrativo explicando que a etapa de decisões acabou, que a etapa de construções está prestes a começar e como ela funciona\",\"prefeito\", load(\"res://audios/Feedback Positivo.ogg\"), self, \"check_if_has_buildings\")
-	
+	add_random_buildings()
+
+func get_dialog_list():
+	var dialogs = []
+	var list = get_weighted_list(Global.categories)
 	var index = 0
 	var temp_dialog
 	for i in range(Global.decisions_per_round):
 		index = Global.get_random(list.size())
 		temp_dialog = load(\"res://Dialog.tscn\").instance()
 		temp_dialog.set_dialog_type(list[index])
-		get_parent().get_node(\"CanvasLayer\").add_child(temp_dialog)
+		dialogs.append(temp_dialog)
+		#get_parent().get_node(\"CanvasLayer\").add_child(temp_dialog)
 		list.remove(index)
-	add_random_buildings()
+	return dialogs
+
+func activate_one_dialog():
+	if dialogs.size() > 0:
+		var temp_dialog = dialogs.pop_front()
+		get_parent().get_node(\"CanvasLayer\").add_child(temp_dialog)
+		add_random_buildings()
+		if first_decision:
+			create_tutorial_decisions()
+			first_decision = false
+	else:
+		Global.gameplay.fim_etapa_construcao()
 		
 func get_weighted_list(categories):
 	var list = []
@@ -119,8 +131,8 @@ func get_weighted_list(categories):
 	return list
 	
 func fim_etapa_construcao():
-	Global.create_generic_dialog(\"Fim da etapa de construções\", 
-	\"A etapa de construções acabou, o jogo está prestes a entrar no ano \"+str(round_n+1),\"prefeito\", load(\"res://audios/Feedback Positivo.ogg\"), self, \"advance_round\")
+	Global.create_generic_dialog(\"Um ano se passou\", 
+	\"O seu mandato está prestes a entrar no ano \"+str(round_n+1),\"prefeito\", load(\"res://audios/Feedback Positivo.ogg\"), self, \"advance_round\")
 
 	if round_n+1>Global.max_rounds:
 		for i in range(10):
@@ -129,14 +141,33 @@ func fim_etapa_construcao():
 func check_if_has_buildings():
 	Global.construction_menu.show()
 	if Global.construction_menu.buildings.size() == 0:
-		Global.gameplay.fim_etapa_construcao()
+		activate_one_dialog()
 		
 func add_random_buildings():
 	for i in range (Global.get_random(10)):
 		Global.construction_menu.add_building(\"Construção civil\", Global.random_textures1x1[Global.get_random(Global.random_textures1x1.size())])
 	for i in range (Global.get_random(5)):
 		Global.construction_menu.add_building(\"Construção civil\", Global.random_textures2x2[Global.get_random(Global.random_textures2x2.size())])
-		"
+		
+		
+func create_tutorial_how_to_build():
+	var tutorial1 = load(\"res://CutScene.tscn\").instance()
+	tutorial1.set_cutscene([\"Tutorial-23.jpg\",\"Tutorial-24.jpg\",
+							\"Tutorial-25.jpg\",\"Tutorial-26.jpg\",
+							\"Tutorial-27.jpg\"], self, \"check_if_has_buildings\")
+	get_parent().get_node(\"CanvasLayer\").add_child(tutorial1)
+	#get_parent().get_node(\"CanvasLayer\").move_child(tutorial1, 0)
+	#get_tree().get_root().add_child(tutorial1)
+
+func create_tutorial_decisions():	
+	var tutorial1 = load(\"res://CutScene.tscn\").instance()
+	tutorial1.set_cutscene([\"Tutorial-11.jpg\",\"Tutorial-12.jpg\",\"Tutorial-13.jpg\",
+							\"Tutorial-14.jpg\",\"Tutorial-15.jpg\",\"Tutorial-16.jpg\", 
+							\"Tutorial-18.jpg\",\"Tutorial-19.jpg\",
+							\"Tutorial-20.jpg\",\"Tutorial-21.jpg\",\"Tutorial-22.jpg\"])
+	get_parent().get_node(\"CanvasLayer\").add_child(tutorial1)
+	#get_parent().get_node(\"CanvasLayer\").move_child(tutorial1, 0)
+	#get_tree().get_root().add_child(tutorial1)"
 
 [node name="Node2D" type="Node2D"]
 
