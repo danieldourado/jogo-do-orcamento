@@ -6,8 +6,12 @@ var initial_position
 export var zoom_factor = 1
 export var zoom_ease_time = 0.5
 export var move_multiplier = 2
+export var max_zoom = 6
+export var min_zoom = 1
 var current_tween
 var zoom_to
+
+
 
 func _ready():
 	var root = get_parent()
@@ -26,7 +30,7 @@ func _input(event):
 # Zoom Camera
 func _zoom_camera(dir):
 	zoom_to = zoom_to + Vector2(0.1, 0.1) * dir
-	var zoom_clamped = clamp(zoom_to.x, 1.0, 4.0)
+	var zoom_clamped = clamp(zoom_to.x, min_zoom, max_zoom)
 	zoom_to = Vector2(zoom_clamped, zoom_clamped)
 	current_tween = animate_to(self, "zoom", zoom_to, zoom_ease_time)
 
