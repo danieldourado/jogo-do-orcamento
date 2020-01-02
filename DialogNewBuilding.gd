@@ -12,7 +12,7 @@ func set_dialog(type, title, text, texture, caller_node = null, callback_functio
 	
 	get_node("9SliceBox/VBoxContainer/Label").text = title
 	get_node("9SliceBox/VBoxContainer/Label2").text = text
-	get_node("9SliceBox/TextureRect2").texture = load("res://images/"+texture+".png")
+	get_node("9SliceBox/TextureRect").texture = load("res://images/"+texture+".png")
 
 func remove_me_from_parent():
 	if caller_node:

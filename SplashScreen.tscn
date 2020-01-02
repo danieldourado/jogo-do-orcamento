@@ -1,10 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://SplashScreen.gd" type="Script" id=1]
 [ext_resource path="res://BlackBackgroundForMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Interface/LOGO JOGO DO ORÇAMENTO.png" type="Texture" id=3]
-[ext_resource path="res://fonts/OpenSans.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/Boogaloo-Regular.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+font_data = ExtResource( 4 )
 
 [node name="SplashScreen" type="Control"]
 anchor_right = 1.0
@@ -30,7 +34,7 @@ stretch_mode = 5
 margin_top = 548.0
 margin_right = 1280.0
 margin_bottom = 658.0
-custom_fonts/font = ExtResource( 4 )
+custom_fonts/font = SubResource( 1 )
 text = "Clique em qualquer lugar para continuar"
 align = 1
 
@@ -43,5 +47,4 @@ expand = true
 __meta__ = {
 "_edit_lock_": true
 }
-
 [connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

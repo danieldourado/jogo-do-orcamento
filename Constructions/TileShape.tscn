@@ -1,12 +1,8 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 33.2197
 
 [node name="TileShape" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 91, 43 )
-rotation = 2.35619
 shape = SubResource( 1 )
-

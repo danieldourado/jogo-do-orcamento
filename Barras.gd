@@ -4,7 +4,7 @@ var barras = []
 
 func _ready():
 	create_barras_de_necessidade(Global.categories)
-	get_node("HBox").add_constant_override("separation", 35)
+	get_node("HBox").add_constant_override("separation", 45)
 	
 	
 func create_barras_de_necessidade(categories):

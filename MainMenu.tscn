@@ -22,4 +22,3 @@ __meta__ = {
 }
 
 [node name="SplashScreen" parent="." instance=ExtResource( 3 )]
-

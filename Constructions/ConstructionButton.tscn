@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Constructions/ConstructionButton.gd" type="Script" id=1]
-[ext_resource path="res://images/Camada 5 copiar.png" type="Texture" id=2]
+[ext_resource path="res://images/Camada 6 copiar.png" type="Texture" id=2]
 [ext_resource path="res://fonts/OpenSans-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://images/Interface/NONE.png" type="Texture" id=4]
 
@@ -45,5 +45,4 @@ margin_right = 34.5965
 margin_bottom = 8.05608
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "1"
-
 [connection signal="pressed" from="Texture" to="." method="_on_Texture_pressed"]

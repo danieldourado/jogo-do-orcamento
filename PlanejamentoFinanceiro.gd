@@ -11,7 +11,7 @@ func _ready():
 	start(Global.categories)
 	Global.play_sound(load("res://audios/Feedback Positivo.ogg"))
 	remaining_value = Global.max_value
-	get_node("VBoxContainer/Label").text = "Orçamento: R$"+str(Global.max_value)
+	get_node("VBoxContainer/HBoxContainer/Label").text = "Orçamento: R$"+str(Global.max_value)
 	set_remaining_value(remaining_value)
 
 func start(categories_list):
@@ -32,9 +32,9 @@ func create_sliders(categories_list):
 
 func set_remaining_value(value):
 	if value < 0:
-		get_node("VBoxContainer/Label2").text = "Orçamento restante: R$0"
+		get_node("VBoxContainer/HBoxContainer/Label2").text = "Orçamento restante: R$0"
 	else:
-		get_node("VBoxContainer/Label2").text = "Orçamento restante: R$"+str(value)
+		get_node("VBoxContainer/HBoxContainer/Label2").text = "Orçamento restante: R$"+str(value)
 	remaining_value = value
 
 func _process(delta):

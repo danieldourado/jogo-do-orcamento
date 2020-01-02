@@ -1,63 +1,109 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://themes/slider.tres" type="Theme" id=1]
 [ext_resource path="res://PlanejamentoFinanceiroSlider.gd" type="Script" id=2]
+[ext_resource path="res://fonts/planejamento_default.tres" type="DynamicFont" id=3]
+[ext_resource path="res://images/Interface/Planejamento/BOTAO_MENOS.png" type="Texture" id=4]
+[ext_resource path="res://images/Interface/Planejamento/BOTAO_MENOS_PRESS.png" type="Texture" id=5]
+[ext_resource path="res://images/Interface/Planejamento/BOTAO_MAIS.png" type="Texture" id=6]
+[ext_resource path="res://images/Interface/Planejamento/BOTAO_MAIS_PRESS.png" type="Texture" id=7]
 
-[node name="PlanejamentoFinanceiroSlider" type="VBoxContainer"]
-margin_right = 801.0
-margin_bottom = 40.0
+[node name="PlanejamentoFinanceiroSlider" type="Control"]
+margin_right = 1000.0
+margin_bottom = 135.0
+rect_min_size = Vector2( 1000, 100 )
 theme = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_right = 801.0
-margin_bottom = 23.0
+editor/display_folded = true
+margin_top = 5.0
+margin_right = 1005.0
+margin_bottom = 53.0
+alignment = 1
 
-[node name="Label" type="Label" parent="HBoxContainer"]
-margin_right = 49.0
-margin_bottom = 23.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+editor/display_folded = true
+margin_left = 233.0
+margin_right = 403.0
+margin_bottom = 48.0
+alignment = 1
+
+[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer"]
+margin_right = 83.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.329412, 0.321569, 0.321569, 1 )
 text = "Saúde"
+align = 1
+valign = 1
 
-[node name="Label2" type="Label" parent="HBoxContainer"]
-margin_left = 53.0
-margin_right = 381.0
-margin_bottom = 23.0
+[node name="Label2" type="Label" parent="HBoxContainer/HBoxContainer"]
+margin_left = 87.0
+margin_right = 170.0
+margin_bottom = 48.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.329412, 0.321569, 0.321569, 1 )
 text = "Saúde"
 
-[node name="Label3" type="Label" parent="HBoxContainer"]
-margin_left = 385.0
-margin_right = 468.0
-margin_bottom = 23.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer"]
+margin_left = 407.0
+margin_right = 567.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 160, 0 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer"]
+editor/display_folded = true
+margin_left = 571.0
+margin_right = 771.0
+margin_bottom = 48.0
+
+[node name="Label3" type="Label" parent="HBoxContainer/HBoxContainer2"]
+margin_right = 139.0
+margin_bottom = 48.0
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.329412, 0.321569, 0.321569, 1 )
 text = "Prioridade"
 
-[node name="Label4" type="Label" parent="HBoxContainer"]
-margin_left = 472.0
-margin_right = 801.0
-margin_bottom = 23.0
+[node name="Label4" type="Label" parent="HBoxContainer/HBoxContainer2"]
+margin_left = 143.0
+margin_right = 200.0
+margin_bottom = 48.0
 size_flags_horizontal = 3
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color = Color( 0.329412, 0.321569, 0.321569, 1 )
 text = "Alta"
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
-margin_top = 27.0
-margin_right = 801.0
-margin_bottom = 43.33
-rect_min_size = Vector2( 2.26, 16.33 )
+[node name="HSliderContainer" type="HBoxContainer" parent="."]
+margin_top = 37.0
+margin_right = 1005.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_vertical = 4
+alignment = 1
 
-[node name="HSlider" type="HSlider" parent="."]
-margin_top = 47.0
-margin_right = 801.0
-margin_bottom = 58.0
+[node name="TextureButton" type="TextureButton" parent="HSliderContainer"]
+margin_right = 73.0
+margin_bottom = 73.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+
+[node name="HSlider" type="HSlider" parent="HSliderContainer"]
+margin_left = 77.0
+margin_top = 16.0
+margin_right = 927.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 850, 0 )
+size_flags_horizontal = 2
+size_flags_vertical = 4
 theme = ExtResource( 1 )
-ticks_on_borders = false
 
-[node name="MarginContainer2" type="MarginContainer" parent="."]
-margin_top = 62.0
-margin_right = 801.0
-margin_bottom = 78.33
-rect_min_size = Vector2( 2.26, 16.33 )
-
+[node name="TextureButton2" type="TextureButton" parent="HSliderContainer"]
+margin_left = 931.0
+margin_right = 1005.0
+margin_bottom = 73.0
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+[connection signal="pressed" from="HSliderContainer/TextureButton" to="." method="_on_DecreaseButton_pressed"]
+[connection signal="pressed" from="HSliderContainer/TextureButton2" to="." method="_on_IncreaseButton_pressed"]

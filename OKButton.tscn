@@ -18,5 +18,4 @@ expand = true
 stretch_mode = 4
 script = ExtResource( 3 )
 stream = ExtResource( 4 )
-
 [connection signal="pressed" from="." to="." method="_on_OKButton_pressed"]

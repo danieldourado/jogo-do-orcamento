@@ -1,7 +1,7 @@
 [{
 	"dialogs": [{
 			"tipo": "Saúde",
-			"texto": "Houve um incêndio no hospital. Perda total. Deseja construir um novo?",
+			"texto": "As filas nos hospitais estão aumentando! Sugiro a construção de um novo hospital para aumentar a velocidade dos atendimentos.",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -10,12 +10,12 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Hospital1",
+			"predio": "hospital1",
 			"nome": "Hospital"
 		},
 		{
 			"tipo": "Educação",
-			"texto": "Houve um incêndio na escola. Perda total. Deseja construir uma nova?",
+			"texto": "As escolas estão muito cheias! A qualidade do ensino está diminuindo. Acho que precisamos construir uma nova escola para melhorar o nível da educação na nossa cidade.",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -29,7 +29,7 @@
 		},
 		{
 			"tipo": "Segurança",
-			"texto": "Houve um incêndio na delegacia. Perda total. Deseja construir uma nova?",
+			"texto": "A criminalidade está aumentando! Acredito que a construção de uma nova delegacia de polícia poderia solucionar o problema.",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -42,8 +42,22 @@
 			"nome": "Delegacia"
 		},
 		{
+			"tipo": "Segurança",
+			"texto": "O último incêndio causou um enorme prejuízo para a cidade e poderia ser contido. Será que chegou a hora de Plenarópolis ter seu corpo de bombeiros?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "BOMBEIROS",
+			"nome": "Bombeiros"
+		},
+		{
 			"tipo": "Mobilidade",
-			"texto": "Houve um incêndio na rodoviária. Perda total. Deseja construir uma nova?",
+			"texto": "Os ônibus estão ficando cada vez mais cheios e os cidadãos estão reclamando da falta de linhas. Construir uma nova rodoviária poderia resolver a situação.",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -56,8 +70,8 @@
 			"nome": "Rodoviária"
 		},
 		{
-			"tipo": "Lazer",
-			"texto": "Houve um incêndio no parque de diversões. Perda total. Deseja construir um novo?",
+			"tipo": "Mobilidade",
+			"texto": "Os ônibus estão ficando cada vez mais cheios e os cidadãos estão reclamando da falta de linhas. Construir uma nova rodoviária poderia resolver a situação.",
 			"sim": {
 				"financeiro": -10000,
 				"satisfacao": 1
@@ -66,9 +80,64 @@
 				"financeiro": 0,
 				"satisfacao": -1
 			},
-			"predio": "Lazer2",
-			"nome": "Campo de Futebol"
-			
+			"predio": "Rodoviaria1",
+			"nome": "Rodoviária"
+		},
+		{
+			"tipo": "Lazer",
+			"texto": "As pessoas estão entediadas, reclamando da falta de opções gastronômicas! Que tal construimos um café para animar a população?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "CAFÉ",
+			"nome": "Café"
+		},
+		{
+			"tipo": "Lazer",
+			"texto": "As pessoas estão tendo que viajar pra cidade vizinha pra assistir o mais novo lançamento de filme de super heróis! Que tal construimos um cinema?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "CINEMA",
+			"nome": "Cinema"
+		},
+		{
+			"tipo": "Lazer",
+			"texto": "As pessoas estão entediadas, reclamando da falta de opções gastronômicas! Que tal construimos uma pizzaria para animar a população?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "PIZZARIA_01",
+			"nome": "Pizzaria"
+		},
+		{
+			"tipo": "Lazer",
+			"texto": "As pessoas estão entediadas, reclamando da falta de opções gastronômicas! Que tal construimos uma pizzaria para animar a população?",
+			"sim": {
+				"financeiro": -10000,
+				"satisfacao": 1
+			},
+			"nao": {
+				"financeiro": 0,
+				"satisfacao": -1
+			},
+			"predio": "PIZZARIA_02",
+			"nome": "Pizzaria"
 		}
 	]
 }]

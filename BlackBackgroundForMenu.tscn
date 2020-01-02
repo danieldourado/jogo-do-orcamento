@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://images/prefeito.png" type="Texture" id=1]
+[ext_resource path="res://images/Interface/SLIDER_FUNDO.png" type="Texture" id=1]
 
 [node name="BlackBackgroundForMenu" type="TextureRect"]
-modulate = Color( 0, 0, 0, 0.862745 )
+modulate = Color( 0, 0, 0, 1 )
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -17,4 +17,3 @@ expand = true
 __meta__ = {
 "_edit_lock_": true
 }
-

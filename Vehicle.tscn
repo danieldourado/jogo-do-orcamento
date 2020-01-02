@@ -11,4 +11,3 @@ final_pos = Vector2( 100, 100 )
 texture = ExtResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]
-

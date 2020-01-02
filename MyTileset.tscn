@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://images/Ground/ARVORES_01.png" type="Texture" id=1]
 [ext_resource path="res://images/Ground/ARVORES_02.png" type="Texture" id=2]
@@ -34,6 +34,10 @@
 [ext_resource path="res://images/Street/PISTA_11.png" type="Texture" id=32]
 [ext_resource path="res://images/Street/POSTES.png" type="Texture" id=33]
 [ext_resource path="res://images/Sea/TILE_AGUA.png" type="Texture" id=34]
+[ext_resource path="res://images/Ground/TILE ASFALTO.png" type="Texture" id=35]
+[ext_resource path="res://images/Ground/TILE_CONCRETO.png" type="Texture" id=36]
+[ext_resource path="res://images/Street/PISTA_12.png" type="Texture" id=37]
+[ext_resource path="res://images/Street/PISTA_13.png" type="Texture" id=38]
 
 [node name="Node2D" type="Node2D"]
 
@@ -176,3 +180,18 @@ texture = ExtResource( 33 )
 position = Vector2( 1157.52, 325.094 )
 texture = ExtResource( 34 )
 
+[node name="Sprite36" type="Sprite" parent="."]
+position = Vector2( 1155.57, 440.027 )
+texture = ExtResource( 35 )
+
+[node name="Sprite37" type="Sprite" parent="."]
+position = Vector2( 1161.42, 547.168 )
+texture = ExtResource( 36 )
+
+[node name="Sprite38" type="Sprite" parent="."]
+position = Vector2( 931.554, 611.453 )
+texture = ExtResource( 37 )
+
+[node name="Sprite39" type="Sprite" parent="."]
+position = Vector2( 623.767, 611.453 )
+texture = ExtResource( 38 )

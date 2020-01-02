@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://MainMenuMenu.gd" type="Script" id=1]
 [ext_resource path="res://BlackBackgroundForMenu.tscn" type="PackedScene" id=2]
 [ext_resource path="res://images/Interface/LOGO JOGO DO ORÇAMENTO.png" type="Texture" id=3]
-[ext_resource path="res://fonts/OpenSans.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/boog_main_menu.tres" type="DynamicFont" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/Boogaloo-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 100
+font_data = SubResource( 1 )
 
 [node name="MainMenuMenu" type="Control"]
 anchor_right = 1.0
@@ -18,9 +25,10 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -596.0
-margin_top = -181.5
+margin_top = -221.5
 margin_right = -64.0
-margin_bottom = 181.5
+margin_bottom = 141.5
+rect_scale = Vector2( 1.3, 1.3 )
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 5
@@ -30,27 +38,26 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -640.0
-margin_top = -360.0
-margin_right = -1.99976
-margin_bottom = 360.0
+margin_left = -545.72
+margin_top = -143.644
+margin_right = -189.72
+margin_bottom = 156.356
 alignment = 1
 
 [node name="NewGame" type="Button" parent="VBoxContainer"]
-margin_top = 297.0
-margin_right = 638.0
-margin_bottom = 358.0
+margin_top = 22.0
+margin_right = 356.0
+margin_bottom = 148.0
 custom_fonts/font = ExtResource( 4 )
 text = "Novo Jogo"
 flat = true
 
 [node name="Créditos" type="Button" parent="VBoxContainer"]
-margin_top = 362.0
-margin_right = 638.0
-margin_bottom = 423.0
-custom_fonts/font = ExtResource( 4 )
+margin_top = 152.0
+margin_right = 356.0
+margin_bottom = 278.0
+custom_fonts/font = SubResource( 2 )
 text = "Créditos"
 flat = true
-
 [connection signal="pressed" from="VBoxContainer/NewGame" to="." method="_on_NewGame_pressed"]
 [connection signal="pressed" from="VBoxContainer/Créditos" to="." method="_on_Crditos_pressed"]
