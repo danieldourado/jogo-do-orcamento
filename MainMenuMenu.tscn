@@ -2,8 +2,9 @@
 
 [ext_resource path="res://MainMenuMenu.gd" type="Script" id=1]
 [ext_resource path="res://BlackBackgroundForMenu.tscn" type="PackedScene" id=2]
-[ext_resource path="res://images/Interface/LOGO JOGO DO ORÇAMENTO.png" type="Texture" id=3]
+[ext_resource path="res://images/Interface/LOGO JOGO DO ORCAMENTO.png" type="Texture" id=3]
 [ext_resource path="res://fonts/boog_main_menu.tres" type="DynamicFont" id=4]
+
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/Boogaloo-Regular.ttf"

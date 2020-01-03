@@ -1,0 +1,648 @@
+{
+	"textures": [
+		{
+			"image": "TileSetSpriteSheet.png",
+			"size": {
+				"w": 970,
+				"h": 780
+			},
+			"sprites": [
+				{
+					"filename": "ARVORES_05.png",
+					"region": {
+						"x": 1,
+						"y": 1,
+						"w": 138,
+						"h": 70
+					},
+					"margin": {
+						"x": 34,
+						"y": 0,
+						"w": 54,
+						"h": 26
+					}
+				},
+				{
+					"filename": "ARVORES_03.png",
+					"region": {
+						"x": 141,
+						"y": 1,
+						"w": 138,
+						"h": 81
+					},
+					"margin": {
+						"x": 25,
+						"y": 1,
+						"w": 54,
+						"h": 15
+					}
+				},
+				{
+					"filename": "ARVORES_07.png",
+					"region": {
+						"x": 281,
+						"y": 1,
+						"w": 116,
+						"h": 82
+					},
+					"margin": {
+						"x": 42,
+						"y": 2,
+						"w": 76,
+						"h": 14
+					}
+				},
+				{
+					"filename": "ARVORES_08.png",
+					"region": {
+						"x": 399,
+						"y": 1,
+						"w": 121,
+						"h": 82
+					},
+					"margin": {
+						"x": 41,
+						"y": 3,
+						"w": 71,
+						"h": 14
+					}
+				},
+				{
+					"filename": "ARVORES_01.png",
+					"region": {
+						"x": 522,
+						"y": 1,
+						"w": 126,
+						"h": 89
+					},
+					"margin": {
+						"x": 34,
+						"y": 0,
+						"w": 66,
+						"h": 7
+					}
+				},
+				{
+					"filename": "ARVORES_02.png",
+					"region": {
+						"x": 650,
+						"y": 1,
+						"w": 154,
+						"h": 92
+					},
+					"margin": {
+						"x": 17,
+						"y": 0,
+						"w": 38,
+						"h": 4
+					}
+				},
+				{
+					"filename": "ARVORES_04.png",
+					"region": {
+						"x": 806,
+						"y": 1,
+						"w": 146,
+						"h": 92
+					},
+					"margin": {
+						"x": 30,
+						"y": 0,
+						"w": 46,
+						"h": 4
+					}
+				},
+				{
+					"filename": "ARVORES_09.png",
+					"region": {
+						"x": 1,
+						"y": 73,
+						"w": 101,
+						"h": 96
+					},
+					"margin": {
+						"x": 30,
+						"y": 0,
+						"w": 91,
+						"h": 0
+					}
+				},
+				{
+					"filename": "ARVORES_06.png",
+					"region": {
+						"x": 104,
+						"y": 84,
+						"w": 148,
+						"h": 93
+					},
+					"margin": {
+						"x": 22,
+						"y": 1,
+						"w": 44,
+						"h": 3
+					}
+				},
+				{
+					"filename": "CALCADA_01.png",
+					"region": {
+						"x": 254,
+						"y": 85,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_02.png",
+					"region": {
+						"x": 448,
+						"y": 92,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_03.png",
+					"region": {
+						"x": 642,
+						"y": 95,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_04.png",
+					"region": {
+						"x": 1,
+						"y": 179,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_05.png",
+					"region": {
+						"x": 195,
+						"y": 183,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_06.png",
+					"region": {
+						"x": 389,
+						"y": 190,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_07.png",
+					"region": {
+						"x": 583,
+						"y": 193,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_08.png",
+					"region": {
+						"x": 777,
+						"y": 193,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_09.png",
+					"region": {
+						"x": 1,
+						"y": 277,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_10.png",
+					"region": {
+						"x": 195,
+						"y": 281,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "CALCADA_11.png",
+					"region": {
+						"x": 389,
+						"y": 288,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "GRAMAS_01.png",
+					"region": {
+						"x": 583,
+						"y": 291,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "GRAMAS_02.png",
+					"region": {
+						"x": 777,
+						"y": 291,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "GRAMAS_03.png",
+					"region": {
+						"x": 1,
+						"y": 375,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "GRAMAS_04.png",
+					"region": {
+						"x": 195,
+						"y": 379,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "GRAMAS_05.png",
+					"region": {
+						"x": 389,
+						"y": 386,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "GRAMAS_06.png",
+					"region": {
+						"x": 583,
+						"y": 389,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_01.png",
+					"region": {
+						"x": 777,
+						"y": 389,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_02.png",
+					"region": {
+						"x": 1,
+						"y": 473,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_03.png",
+					"region": {
+						"x": 195,
+						"y": 477,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_04.png",
+					"region": {
+						"x": 389,
+						"y": 484,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_05.png",
+					"region": {
+						"x": 583,
+						"y": 487,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_06.png",
+					"region": {
+						"x": 777,
+						"y": 487,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_07.png",
+					"region": {
+						"x": 1,
+						"y": 571,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_08.png",
+					"region": {
+						"x": 195,
+						"y": 575,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_09.png",
+					"region": {
+						"x": 389,
+						"y": 582,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_10.png",
+					"region": {
+						"x": 583,
+						"y": 585,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_11.png",
+					"region": {
+						"x": 777,
+						"y": 585,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_12.png",
+					"region": {
+						"x": 1,
+						"y": 669,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "PISTA_13.png",
+					"region": {
+						"x": 195,
+						"y": 673,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "TILE ASFALTO.png",
+					"region": {
+						"x": 389,
+						"y": 680,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "TILE_AGUA.png",
+					"region": {
+						"x": 583,
+						"y": 683,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "TILE_CONCRETO.png",
+					"region": {
+						"x": 777,
+						"y": 683,
+						"w": 192,
+						"h": 96
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:b18ccf104ffa967a2bea8162d8e56b7a:a0a070365a6578ec0a4f1f181ad1d5a4:11dd3488744998fba5c9520779638c8a$"
+	}
+}

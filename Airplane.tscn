@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Vehicle.gd" type="Script" id=1]
-[ext_resource path="res://images/vehicles/AVIÃO.png" type="Texture" id=2]
-[ext_resource path="res://images/vehicles/AVIÃO SOMBRA.png" type="Texture" id=3]
+[ext_resource path="res://images/vehicles/AVIAO.png" type="Texture" id=2]
 
 [node name="Vehicle" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,9 +13,10 @@ z_as_relative = false
 texture = ExtResource( 2 )
 
 [node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 1351.19, 1361.16 )
+modulate = Color( 0, 0, 0, 0.141176 )
+position = Vector2( 1064.23, 1211.87 )
 z_index = 4096
 z_as_relative = false
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="Tween" type="Tween" parent="."]

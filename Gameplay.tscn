@@ -33,15 +33,15 @@
 [ext_resource path="res://ConstructionMenu.tscn" type="PackedScene" id=31]
 [ext_resource path="res://BlackBackgroundForMenu.tscn" type="PackedScene" id=32]
 [ext_resource path="res://BarrasDeNecessidade.tscn" type="PackedScene" id=33]
-[ext_resource path="res://BarrasDeOrçamentoGeral.tscn" type="PackedScene" id=34]
-[ext_resource path="res://BarrasDeOrçamento.tscn" type="PackedScene" id=35]
+[ext_resource path="res://BarrasDeOrcamentoGeral.tscn" type="PackedScene" id=34]
+[ext_resource path="res://BarrasDeOrcamento.tscn" type="PackedScene" id=35]
 [ext_resource path="res://Constructions/static/Estacionamento.tscn" type="PackedScene" id=36]
 [ext_resource path="res://images/Ground/ESTACIONAMENTO_04 copiar.png" type="Texture" id=37]
 [ext_resource path="res://Constructions/static/Estadio.tscn" type="PackedScene" id=38]
 [ext_resource path="res://images/PREDIO_GRANDE.png" type="Texture" id=39]
 [ext_resource path="res://Constructions/SpriteZIndexOrdered.gd" type="Script" id=40]
 [ext_resource path="res://images/PALACIO PLENAROPOLIS.png" type="Texture" id=41]
-[ext_resource path="res://images/PRAÇA ECA.png" type="Texture" id=42]
+[ext_resource path="res://images/PRACA ECA.png" type="Texture" id=42]
 [ext_resource path="res://images/Camada 43.png" type="Texture" id=43]
 [ext_resource path="res://images/PREFEITURA_PLENAROPOLIS.png" type="Texture" id=44]
 [ext_resource path="res://images/SHOPPING.png" type="Texture" id=45]
@@ -144,9 +144,10 @@ func check_if_has_buildings():
 		activate_one_dialog()
 		
 func add_random_buildings():
-	for i in range (Global.get_random(10)):
+	Global.construction_menu.add_building(\"Construção civil\", Global.random_textures1x1[Global.get_random(Global.random_textures1x1.size())])
+	for i in range (Global.get_random(3)):
 		Global.construction_menu.add_building(\"Construção civil\", Global.random_textures1x1[Global.get_random(Global.random_textures1x1.size())])
-	for i in range (Global.get_random(5)):
+	for i in range (Global.get_random(2)):
 		Global.construction_menu.add_building(\"Construção civil\", Global.random_textures2x2[Global.get_random(Global.random_textures2x2.size())])
 		
 		
@@ -1000,7 +1001,7 @@ drag_margin_h_enabled = false
 drag_margin_v_enabled = false
 script = ExtResource( 30 )
 zoom_factor = 4
-max_zoom = 5
+max_zoom = 4
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -1032,6 +1033,7 @@ margin_right = 1372.0
 margin_bottom = 440.0
 
 [node name="GameplayControl" type="Node2D" parent="."]
+editor/display_folded = true
 script = SubResource( 1 )
 
 [node name="PlayerConstructions" type="Node2D" parent="GameplayControl"]
@@ -2448,7 +2450,6 @@ stream = ExtResource( 61 )
 autoplay = true
 
 [node name="Vehicles" type="Node2D" parent="."]
-editor/display_folded = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -2459,7 +2460,8 @@ editor/display_folded = true
 [node name="AviãoSpawner" parent="Vehicles/Aéreos" instance=ExtResource( 62 )]
 editor/display_folded = true
 position = Vector2( 9404.76, -4391.77 )
-time_between_car_spawn = 30
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 60
 
 [node name="Position2D" type="Position2D" parent="Vehicles/Aéreos/AviãoSpawner"]
 position = Vector2( -16361.3, 9313.36 )
@@ -2787,9 +2789,53 @@ time_between_car_spawn = 5
 [node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit/VehicleSpawner3"]
 position = Vector2( -1336.4, 663.04 )
 
+[node name="Kit11" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 1561.95, -3561.16 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit11" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit11/VehicleSpawner2"]
+position = Vector2( 1335.14, -668.287 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit11" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -1687.32, 2121.64 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit11/VehicleSpawner3"]
+position = Vector2( -1336.4, 663.04 )
+
+[node name="Kit12" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 3249.71, -4405.04 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit12" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit12/VehicleSpawner2"]
+position = Vector2( 1335.14, -668.287 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit12" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -1687.32, 2121.64 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit12/VehicleSpawner3"]
+position = Vector2( -1336.4, 663.04 )
+
 [node name="Kit2" type="Node2D" parent="Vehicles/Carros"]
 editor/display_folded = true
-position = Vector2( 126.989, 33.259 )
+position = Vector2( 126.989, 32.259 )
 
 [node name="VehicleSpawner2" parent="Vehicles/Carros/Kit2" instance=ExtResource( 68 )]
 editor/display_folded = true
@@ -2807,6 +2853,50 @@ time_for_each_car_to_complete = 20
 time_between_car_spawn = 5
 
 [node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit2/VehicleSpawner3"]
+position = Vector2( -1336.4, 663.04 )
+
+[node name="Kit10" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 1688.94, -3528.9 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit10" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit10/VehicleSpawner2"]
+position = Vector2( 1335.14, -668.287 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit10" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -1687.32, 2121.64 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit10/VehicleSpawner3"]
+position = Vector2( -1336.4, 663.04 )
+
+[node name="Kit13" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 3376.7, -4372.78 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit13" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit13/VehicleSpawner2"]
+position = Vector2( 1335.14, -668.287 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit13" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -1687.32, 2121.64 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit13/VehicleSpawner3"]
 position = Vector2( -1336.4, 663.04 )
 
 [node name="Kit3" type="Node2D" parent="Vehicles/Carros"]
@@ -2876,7 +2966,8 @@ time_between_car_spawn = 5
 position = Vector2( -1336.4, 663.04 )
 
 [node name="Kit6" type="Node2D" parent="Vehicles/Carros"]
-position = Vector2( 3030.47, -1352.87 )
+editor/display_folded = true
+position = Vector2( 2858.36, -1434.3 )
 
 [node name="VehicleSpawner2" parent="Vehicles/Carros/Kit6" instance=ExtResource( 68 )]
 editor/display_folded = true
@@ -2895,3 +2986,284 @@ time_between_car_spawn = 5
 
 [node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit6/VehicleSpawner3"]
 position = Vector2( -1336.4, 663.04 )
+
+[node name="Kit7" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 577.391, -2562.46 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit7" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit7/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit7" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit7/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit8" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 862.417, -2521.45 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit8" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit8/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit8" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit8/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit9" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 1758.51, -2566.57 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit9" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit9/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit9" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit9/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit19" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( -144.953, -1304.8 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit19" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit19/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit19" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit19/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit20" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 255.206, -1589.6 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit20" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit20/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit20" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit20/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit21" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( -750.599, -940.694 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit21" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit21/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit21" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit21/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit22" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( -1168.78, -670.316 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit22" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit22/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit22" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit22/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit23" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( -1486.03, 25.4561 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit23" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2243.25, 1891.97 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit23/VehicleSpawner2"]
+position = Vector2( 2748.06, 1378.92 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit23" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( 557.793, 3269.94 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit23/VehicleSpawner3"]
+position = Vector2( -2728.94, -1374.96 )
+
+[node name="Kit14" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 2601.29, -3508.54 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit14" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit14/VehicleSpawner2"]
+position = Vector2( 2916.5, -1468.06 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit14" instance=ExtResource( 68 )]
+position = Vector2( -110.502, 1324.14 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit14/VehicleSpawner3"]
+position = Vector2( -2910.11, 1467.76 )
+
+[node name="Kit15" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 798.771, -3667.92 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit15" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit15/VehicleSpawner2"]
+position = Vector2( 2916.5, -1468.06 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit15" instance=ExtResource( 68 )]
+position = Vector2( -110.502, 1324.14 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit15/VehicleSpawner3"]
+position = Vector2( -2910.11, 1467.76 )
+
+[node name="Kit16" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 573.755, 281.284 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit16" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit16/VehicleSpawner2"]
+position = Vector2( 2916.5, -1468.06 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit16" instance=ExtResource( 68 )]
+position = Vector2( -110.502, 1324.14 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit16/VehicleSpawner3"]
+position = Vector2( -2910.11, 1467.76 )
+
+[node name="Kit17" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( 173.596, -580.32 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit17" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit17/VehicleSpawner2"]
+position = Vector2( 2916.5, -1468.06 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit17" instance=ExtResource( 68 )]
+position = Vector2( -110.502, 1324.14 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit17/VehicleSpawner3"]
+position = Vector2( -2910.11, 1467.76 )
+
+[node name="Kit18" type="Node2D" parent="Vehicles/Carros"]
+editor/display_folded = true
+position = Vector2( -432.05, -933.613 )
+
+[node name="VehicleSpawner2" parent="Vehicles/Carros/Kit18" instance=ExtResource( 68 )]
+editor/display_folded = true
+position = Vector2( -2989.46, 2809.48 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit18/VehicleSpawner2"]
+position = Vector2( 2916.5, -1468.06 )
+
+[node name="VehicleSpawner3" parent="Vehicles/Carros/Kit18" instance=ExtResource( 68 )]
+position = Vector2( -110.502, 1324.14 )
+time_for_each_car_to_complete = 20
+time_between_car_spawn = 5
+
+[node name="Position2D" type="Position2D" parent="Vehicles/Carros/Kit18/VehicleSpawner3"]
+position = Vector2( -2910.11, 1467.76 )

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BarrasDeOrcamentoGeral.gd" type="Script" id=1]
+[ext_resource path="res://fonts/titulo-barra-necessidade.tres" type="DynamicFont" id=2]
+
+
+[node name="BarrasDeOrçamentoGeral" type="Control"]
+margin_right = 372.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_right = 300.0
+margin_bottom = 90.0
+custom_fonts/font = ExtResource( 2 )
+text = "Orçamento Geral
+
+"
+align = 1
+
+[node name="HBox" type="VBoxContainer" parent="."]
+margin_top = 20.0
+margin_bottom = 36.0

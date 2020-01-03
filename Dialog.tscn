@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://images/Interface/Educação.jpg" type="Texture" id=1]
+[ext_resource path="res://images/Interface/Ed.jpg" type="Texture" id=1]
 [ext_resource path="res://fonts/title_dialog.tres" type="DynamicFontData" id=2]
 [ext_resource path="res://fonts/new_building_font.tres" type="DynamicFont" id=3]
 [ext_resource path="res://fonts/custo_dialog.tres" type="DynamicFont" id=4]
@@ -19,7 +19,7 @@ func set_dialog_type(type):
 	get_node(\"VBoxContainer/Label\").text = \"Decisão sobre \"+dialog_data.tipo
 	get_node(\"VBoxContainer/Label2\").text = dialog_data.texto
 	get_node(\"VBoxContainer/Label3\").text = \"Custo: \"+str((int(dialog_data.sim.financeiro) * -1))
-	get_node(\"TextureRect\").texture = load(\"res://images/interface/\"+dialog_data.tipo+\".jpg\")
+	get_node(\"TextureRect\").texture = load(\"res://images/Interface/\"+dialog_data.tipo.substr(0,2)+\".jpg\")
 
 func get_random_cost(dialog_data):
 	dialog_data.sim.financeiro = (Global.get_random(3)+1)*5000*-1
