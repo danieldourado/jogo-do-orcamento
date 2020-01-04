@@ -23,13 +23,11 @@ func _ready():
 
 # warning-ignore:unused_argument
 func _area_entered (body):
-	modulate = Color(1, 0, 0)
-	can_build = false
+	set_not_buildable()
 	
 # warning-ignore:unused_argument
 func _area_exited (body):
-	modulate = Color(1, 1, 1)
-	can_build = true
+	set_buildable()
 	
 func get_y_offset():
 	var ct = get_node("/root/Node2D/ConstructionTiles")
@@ -66,16 +64,19 @@ func _pressed():
 	Global.play_sound(load("res://audios/Construindo.ogg"))
 	get_node("TextureButton").disconnect("pressed", self, "_pressed")
 	Global.construction_menu.remove_building(construction_texture_name)
+	$"StaticConstruction".modulate = Color(1, 1, 1, 1)
 	
 func set_name(new_name):
 	building_name = new_name
 	
 func set_not_buildable():
-	$"StaticConstruction".modulate = Color(1, 0, 0)
+	if built: return
+	$"StaticConstruction".modulate = Color(1, 0, 0, 0.5)
 	can_build = false
 	
 func set_buildable():
-	$"StaticConstruction".modulate = Color(1, 1, 1)
+	if built: return
+	$"StaticConstruction".modulate = Color(1, 1, 1, 0.5)
 	can_build = true
 
 func is_texture_is_over_not_buildable_tile(cell_index, ct):
