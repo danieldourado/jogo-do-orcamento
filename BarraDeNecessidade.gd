@@ -6,7 +6,7 @@ onready var ProgressBar = $ProgressBar
 func set_type(type):
 	self.type = type
 	set_value(3)
-	get_node("TextureRect").texture = load("res://images/Interface/"+type.key+"-icone.png")
+	get_node("TextureRect").texture = load("res://images/Interface/"+type.key.substr(0,2)+"-icone.png")
 	
 func set_value(value):
 	ProgressBar.value = value

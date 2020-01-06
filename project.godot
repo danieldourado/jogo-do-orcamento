@@ -47,5 +47,11 @@ zoom_out={
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
+quality/reflections/texture_array_reflections=false
+quality/reflections/high_quality_ggx=false
+quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"
+quality/subsurface_scattering/quality=0
+quality/voxel_cone_tracing/high_quality=false
